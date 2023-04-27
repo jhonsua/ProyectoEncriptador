@@ -1,0 +1,37 @@
+body{
+    display: flex;
+    flex-direction: row;
+    width: 1440px;
+    height: 1024px;
+    background: #F3F5FC;
+    }
+
+#logo{
+        width: 120px;
+        height: 48px;
+        margin: 40px 0px 0px 40px;
+    }
+#logo img{
+        margin-left: 42px;
+    }
+    
+ #editor{
+        width: 577px;
+         margin: 168px 103px 0px 80px;  
+    }
+
+    ::placeholder { color: #0A3871; }
+#input-text{
+    background-color: rgba(0, 0, 0, 0);
+    border-style: none;
+    resize: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%; 
+    color: #0A3871;;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
