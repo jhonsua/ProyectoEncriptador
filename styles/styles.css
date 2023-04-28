@@ -1,37 +1,64 @@
 body{
     display: flex;
     flex-direction: row;
-    width: 1440px;
-    height: 1024px;
+    width: auto;
+    height: auto;
     background: #F3F5FC;
     }
 
 #logo{
         width: 120px;
         height: 48px;
-        margin: 40px 0px 0px 40px;
+        margin: 3.91vh 0vw 0vh 2.78vw;
     }
 #logo img{
         margin-left: 42px;
     }
     
  #editor{
-        width: 577px;
-         margin: 168px 103px 0px 80px;  
+    margin: 16.4vh 0vw 0vh 5.6vw;
+    width: 40.1%;
+    height: 66.7%;
+    
     }
 
-    ::placeholder { color: #0A3871; }
+::placeholder { color: #0A3871; }
 #input-text{
+    width: 40.07vw;
+    height: 66.7vh;
     background-color: rgba(0, 0, 0, 0);
+    outline: 0;
     border-style: none;
     resize: none;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 3.13vh;
     line-height: 150%; 
-    color: #0A3871;;
+    color: #0A3871;
+    padding: 0px;
+}
+#input-text:focus{
+    outline: 0;
+}
+#alert{
+    display: inline-flex;
+    width: 15.9vw;
+    height: 1.76vh;
+}
+#alert img{
+    width: 1.11vw;
+    height: 1.56vh;
+    margin-right: 0.56vh;
+}
+p{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 1.18vh;
+line-height: 1.76vh;
+color: #495057;
+opacity: 0.8
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
