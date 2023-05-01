@@ -1,36 +1,43 @@
 body{
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    max-width: 93.75vw;
-    max-height: 135.80vh;
-    width: 100vw;
+    flex-direction:row;
+    width: 100%;
     height: 100vh;
+    max-width: 1440px;
+    max-height: 1024px;
     background: #F3F5FC;
-  
-    }
 
+    }   
+body > div{
+    align-items:stretch
+}
 #logo{
-        width: 8.33vw;
-        height: 4.69vh;
-        margin: 3.91vh 0vw 0vh 2.78vw;
+        width: 8.33%;
+        margin: 2.78% 0% 0% 2.78%;
+  
+      
     }
 #logo img{
         margin-left: 42px;
     }
 
- #editor{
-    width: 40.1%;
-    height: 66.7%;
-    margin: 16.4vh 0vw 0vh 5.6vw;
+ #encriptar{
+    width: 40.07%;
+    max-width: 577px;
+    max-height: 856px;
+    margin: 11.67% 0% 0% 5.56%;
     }
-#editor, #alert, #botonOne{
-    margin-left: 5.5vw;
-}
+
+    #editor{
+        max-width: 577px;
+        max-height: 683px ;
+        width: 100%;
+        height:100%;
+    }
+
 ::placeholder { color: #0A3871; }
 #input-text{
-    width: 40.07vw;
-    height: 66.7vh;
+    
     background-color: rgba(0, 0, 0, 0);
     outline: 0;
     border-style: none;
@@ -42,42 +49,59 @@ body{
     line-height: 150%; 
     color: #0A3871;
     padding: 0px;
+    
 }
 #input-text:focus{
     outline: 0;
 }
 #alert{
     display: inline-flex;
-    width: 15.9vw;
-    height: 1.76vh;
+    width: 39.69%;
+    height: 2.11%;
+    max-width: 229px;
+    max-height: 18px;
+    margin-bottom: 2.77%;
 }
 #alert img{
-    width: 1.11vw;
-    height: 1.56vh;
-    margin-right: 0.56vh;
+    width: 7.33%;
+    height: 88.89%;
+    max-width: 16px;
+    max-height: 16px;
+    margin-right: 3.5%;
 }
 #text-alert{
+width: 89.52%;
+height: 100%;
 font-family: 'Inter';
 font-style: normal;
 font-weight: 400;
-font-size: 1.18vh;
-line-height: 1.76vh;
+font-size: 60%;
+line-height: 80%;
 color: #495057;
 opacity: 0.8
 }
+#botones{
+    width: 117.86%;
+    height: 7.83%;
+    max-width: 680px;
+    max-height: 67px;
+    display: flex;
+}
 #botonOne, #botonTwo{
-width: 22.78vw;
-height: 6.54vh;
-padding: 2.34vh 1.67vw;
+width: 48.24%;
+max-width: 328px;
+height: 100%;
+padding: 3.53%;
 border-radius: 24px;
 font-family: 'Inter';
 font-style: normal;
 font-weight: 400;
-font-size: 1.56vh;
+font-size: 80%;
 }
 #botonOne{
 background: #0A3871;
 color: #FFFFFF;
+margin-right: 3.53%;
 
 }
 #botonTwo{
@@ -87,20 +111,24 @@ border-color: #0A3871;
 box-sizing: border-box
 }
 #desencriptar{
-width: 27.78vw;
-height: 92.19vh;
+width: 27.78%;
+
+max-height: 944px;
+max-width: 400px;
 background: #FFFFFF;
 box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
 border-radius: 32px;
-margin: 3.9vh 2.78vw 3.9vh 5.56vw;
+margin: 2.78% 2.78% 2.78% 12.71%;
 }
 #desencriptar img{
-  margin: 23.73vh 2.22vw 3.13vh 2.22vw;
-  width: 23.33vw;
-  height: 29.69vh;
+  margin: 60.75% 8% 8% 8%;
+  width: 84%;
+  height: 32.20%;
+  max-width: 338px;
+  max-height: 304px;
 }
 #desencriptar p:nth-child(2){
-    margin: 0vh 2.22vw 1.56vh 2.22vw;
+    margin: 0vh 8.56% 8.56% 8.56%;
     font-family: 'Inter';
    font-style: normal;
    font-weight: 700;
@@ -110,7 +138,7 @@ margin: 3.9vh 2.78vw 3.9vh 5.56vw;
 }
 
 #desencriptar p:nth-child(3){
-    margin: 0vh 2.22vw 1.56vh 2.22vw;
+    margin: 0vh 8.56% 8.56% 8.56%;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
