@@ -160,4 +160,89 @@ margin: 2.78% 2.78% 2.78% 12.71%;
     text-align: center;
     color: #495057;
 }
+#despues{
+    width: 100%;
+    height: 79.39vh;
+    margin: 3.13vh 8% 3.13vh 8%;
+    
+}
+#text-out{
+    width: auto;
+    height: 76.27vh;
+    max-width: 336px;
+    max-height: 781px;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 2.34vh;
+line-height: 150%;
+color: #495057;
+overflow: hidden;
+}
+#copy{
+   background: transparent;
+   margin-left: 40%;
+    border: 2px solid #D8DFE8;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+#copy > i{
+    color: #0A3871;
+}
+#copy::after{
+    position: absolute;
+    content: 'Copiar';
+  transform: translate(-15px,-38px);
+  width: fit-content;
+  height: fit-content;
+  background-color: #D8DFE8;
+  padding: 4px 8px;
+  border-radius: 5px;
+  transition: .1s linear;
+  transition-delay: .1s;
+  color: #0A3871;
+  text-transform: uppercase;
+  font-size: 1.17vh;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  
+}
+#copy:hover::after {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+  }
+
+#copy:hover{
+    transform: scale(1.2);
+}
+
+
+#copy:active{
+    position: absolute;
+    top: 82vh;
+    left: 84.5%;
+    content: 'Ha sido copiado';
+  transform: translateX(-50%);
+  width: fit-content;
+  height: fit-content;
+  background-color: #D8DFE8;
+  padding: 4px 8px;
+  border-radius: 5px;
+  transition: .2s linear;
+  transition-delay: .2s;
+  color: #456652;
+  text-transform: uppercase;
+  font-size: 1.17vh;
+  opacity: 1;
+  visibility: hidden;
+}
+
+
+
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
