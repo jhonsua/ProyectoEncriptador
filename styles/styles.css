@@ -1,43 +1,53 @@
-body{
-    display: flex;
-    flex-direction:row;
+html,body{    
     width: 100%;
     height: 100vh;
     max-width: 1440px;
     max-height: 1024px;
+}
+ body{
+    display: flex;
+    flex-direction:row;
     background: #F3F5FC;
-
     }   
 body > div{
     align-items:stretch
 }
 #logo{
         width: 8.33%;
-        margin: 2.78% 0% 0% 2.78%;
+        
+        margin: 3.91vh 0% 0vh 2.78%;
+        
   
       
     }
 #logo img{
         margin-left: 42px;
+        height: 4.69vh;
+        
     }
 
  #encriptar{
     width: 40.07%;
+    height: 100vh;
     max-width: 577px;
     max-height: 856px;
-    margin: 11.67% 0% 0% 5.56%;
+    margin: 16.41vh 0% 0vh 5.56%;
+    
     }
 
     #editor{
+        width: 100%;
+        height: 66.70vh;
         max-width: 577px;
         max-height: 683px ;
-        width: 100%;
-        height:100%;
+      
+        
     }
 
 ::placeholder { color: #0A3871; }
 #input-text{
-    
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0);
     outline: 0;
     border-style: none;
@@ -57,62 +67,65 @@ body > div{
 #alert{
     display: inline-flex;
     width: 39.69%;
-    height: 2.11%;
+    height: 1.76vh;
     max-width: 229px;
     max-height: 18px;
-    margin-bottom: 2.77%;
+    margin-bottom: 1.56vh;
+    
 }
 #alert img{
-    width: 7.33%;
-    height: 88.89%;
+    
     max-width: 16px;
     max-height: 16px;
     margin-right: 3.5%;
 }
 #text-alert{
 width: 89.52%;
-height: 100%;
+height: 1.76vh;
 font-family: 'Inter';
 font-style: normal;
 font-weight: 400;
-font-size: 60%;
+font-size: 1.17vh;
 line-height: 80%;
+margin-top: 0.2vh;
 color: #495057;
 opacity: 0.8
 }
 #botones{
-    width: 117.86%;
+    width: 117.87%;
     height: 7.83%;
     max-width: 680px;
     max-height: 67px;
+    margin-bottom: 7.03vh;
     display: flex;
 }
 #botonOne, #botonTwo{
 width: 48.24%;
-max-width: 328px;
 height: 100%;
-padding: 3.53%;
+max-width: 328px;
+border-width: 1.6px;
+padding: 0px;
 border-radius: 24px;
 font-family: 'Inter';
 font-style: normal;
 font-weight: 400;
-font-size: 80%;
+font-size: 1.56vh;
+border-style: solid;
+border-color: #0A3871;
 }
 #botonOne{
 background: #0A3871;
 color: #FFFFFF;
 margin-right: 3.53%;
-
 }
 #botonTwo{
 background: #D8DFE8;
 color: #0A3871;
-border-color: #0A3871;
 box-sizing: border-box
 }
 #desencriptar{
 width: 27.78%;
-
+height: 92.19vh;
 max-height: 944px;
 max-width: 400px;
 background: #FFFFFF;
@@ -121,14 +134,14 @@ border-radius: 32px;
 margin: 2.78% 2.78% 2.78% 12.71%;
 }
 #desencriptar img{
-  margin: 60.75% 8% 8% 8%;
+  margin: 27.64vh 8% 3.13vh 8%;
   width: 84%;
-  height: 32.20%;
+  height: 29.69vh;
   max-width: 338px;
   max-height: 304px;
 }
 #desencriptar p:nth-child(2){
-    margin: 0vh 8.56% 8.56% 8.56%;
+    margin: 0vh 8% 3.13vh 8%;
     font-family: 'Inter';
    font-style: normal;
    font-weight: 700;
@@ -138,7 +151,7 @@ margin: 2.78% 2.78% 2.78% 12.71%;
 }
 
 #desencriptar p:nth-child(3){
-    margin: 0vh 8.56% 8.56% 8.56%;
+    margin: 0vh 8% 3.13vh 8%;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
