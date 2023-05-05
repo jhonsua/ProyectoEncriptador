@@ -14,16 +14,11 @@ body > div{
 }
 #logo{
         width: 8.33%;
-        
         margin: 3.91vh 0% 0vh 2.78%;
-        
-  
-      
     }
 #logo img{
         margin-left: 42px;
         height: 4.69vh;
-        
     }
 
  #encriptar{
@@ -34,14 +29,11 @@ body > div{
     margin: 16.41vh 0% 0vh 5.56%;
     
     }
-
     #editor{
         width: 100%;
         height: 66.70vh;
         max-width: 577px;
         max-height: 683px ;
-      
-        
     }
 
 ::placeholder { color: #0A3871; }
@@ -73,11 +65,12 @@ body > div{
     margin-bottom: 1.56vh;
     
 }
-#alert img{
+#alert svg{
     
     max-width: 16px;
     max-height: 16px;
     margin-right: 3.5%;
+    fill: #495057;
 }
 #text-alert{
 width: 89.52%;
@@ -112,17 +105,101 @@ font-weight: 400;
 font-size: 1.56vh;
 border-style: solid;
 border-color: #0A3871;
+cursor: pointer;
+box-shadow: 10px 10px 20px #c5c5c5,
+-8px -7px 3px #ffffff;
 }
+
+
 #botonOne{
 background: #0A3871;
 color: #FFFFFF;
 margin-right: 3.53%;
+box-sizing: border-box;
 }
 #botonTwo{
 background: #D8DFE8;
 color: #0A3871;
-box-sizing: border-box
+box-sizing: border-box;
 }
+
+
+#botonOne::after, #botonTwo::after{
+    content: "";
+    display: inline-block;
+    height: 0%;
+    width: 0%;
+    border-radius: 100px;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    background: #ffffff5b;
+    transition:  opacity 0.8s, transform 0.9s;
+
+    }
+
+    
+    #botonOne:hover, #botonTwo:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+
+    #botonOne:active, #botonTwo:active{
+        border: 3px solid #fff;
+        color: #fff;
+        font-size: 2vh;
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    #botonOne:hover::after,#botonTwo:hover::after {
+       width: 100%;
+       height: 100%;
+       transform: scaleX(1.2) scaleY(1.2);
+        background-color: #fff;
+        opacity: 0;
+       }
+
+    #botonOne:disabled{
+        cursor: default;
+        color: #0A3871;
+    }
+    #botonTwo:disabled{
+        cursor: default;
+        color: #D8DFE8;
+    }
+    #botonOne:disabled:hover,#botonTwo:disabled:hover {
+        color: #D8DFE8;
+        box-sizing: border-box;
+        transform: translateY(0px);
+        box-shadow: 10px 10px 20px #c5c5c5,
+        -8px -7px 3px #ffffff;
+        
+        }
+        #botonOne:disabled:hover {color: #0A3871 }
+
+        #botonOne:disabled:hover::after, #botonTwo:disabled:hover::after {
+            width: 0%;
+            height: 0%;
+            transform: scaleX(0) scaleY(0);
+             background-color: #fff;
+             opacity: 0;
+             box-shadow: 10px 10px 20px #c5c5c5,
+             -8px -7px 3px #ffffff;
+            } 
+
+            #botonOne:disabled:active,#botonTwo:disabled:active {
+                border: 1px solid #0A3871;
+                font-size: 1.56vh;
+                transform: translateY(0px);
+                box-shadow: 10px 10px 20px #c5c5c5,
+        -8px -7px 3px #ffffff;
+            }
+
+
+
 #desencriptar{
 width: 27.78%;
 height: 92.19vh;
@@ -164,10 +241,11 @@ margin: 2.78% 2.78% 2.78% 12.71%;
     width: 100%;
     height: 79.39vh;
     margin: 3.13vh 8% 3.13vh 8%;
+    padding-right: 3%;
     
 }
 #text-out{
-    width: auto;
+    width: 90%;
     height: 76.27vh;
     max-width: 336px;
     max-height: 781px;
@@ -179,28 +257,36 @@ line-height: 150%;
 color: #495057;
 overflow: hidden;
 }
-#copy{
-   background: transparent;
-   margin-left: 40%;
-    border: 2px solid #D8DFE8;
-    border-radius: 10px;
-    cursor: pointer;
 
+#copy{
+    width: 9%;
+    height: 4.7vh;
+   background: #d8dfe800;
+   margin-left: 40%;
+    border: 2px solid #d8dfe800;
+    border-radius: 100%;
+    cursor: pointer;
+   box-shadow: 2px 2px 10px #88a3c78c;
 }
 #copy > i{
     color: #0A3871;
 }
+#copy > i:last-child{
+    display: none;
+    opacity: 0;
+    transition: all 2s;
+    
+}
 #copy::after{
     position: absolute;
     content: 'Copiar';
-  transform: translate(-15px,-38px);
+  transform: translate(-15px,-45px);
   width: fit-content;
   height: fit-content;
   background-color: #D8DFE8;
   padding: 4px 8px;
   border-radius: 5px;
   transition: .1s linear;
-  transition-delay: .1s;
   color: #0A3871;
   text-transform: uppercase;
   font-size: 1.17vh;
@@ -220,29 +306,62 @@ overflow: hidden;
 }
 
 
-#copy:active{
+#copy:focus::after{
     position: absolute;
-    top: 82vh;
-    left: 84.5%;
-    content: 'Ha sido copiado';
-  transform: translateX(-50%);
+    transform: translate(-15px,-44px);
+    content: 'Copiado';
   width: fit-content;
   height: fit-content;
-  background-color: #D8DFE8;
+  background-color: #d1e1d8;
   padding: 4px 8px;
   border-radius: 5px;
-  transition: .2s linear;
-  transition-delay: .2s;
-  color: #456652;
+  color: rgb(22, 85, 24);
   text-transform: uppercase;
   font-size: 1.17vh;
+  visibility: visible;
   opacity: 1;
-  visibility: hidden;
+  display: block;
+
+}
+
+#copy:focus > i:last-child{
+    display: block;
+    color: #456652;
+    opacity: 1;
+  
+}
+
+#copy:focus > i:first-child{
+    display: none;
+}
+.animar{
+    animation: animationScale 1s infinite linear;
+}
+.ocultar{
+    animation: opaciti 0.98s linear;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+@keyframes animationScale {
+
+    40%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+
+}
+
+@keyframes opaciti {
+    100%{
+        opacity: 0;;
+    }
+
 }
 
 
-
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+@keyframes escribir {
+    from { width: 100% }
+    to { width:0 }
+}
