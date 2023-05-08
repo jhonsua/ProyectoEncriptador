@@ -34,8 +34,54 @@ body > div{
         height: 66.70vh;
         max-width: 577px;
         max-height: 683px ;
+        display: flex;
+        flex-wrap: nowrap;
     }
+.botonEditar{
 
+    width: 2%;
+    height: 5vh;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    
+}
+#icon{
+    background: transparent;
+    color: #0A3871;
+    transform: scale(1.4);
+    border-radius: 10px;
+    border-color: #c1c7d08c;
+    box-shadow: 3px 3px 8px 1px #353d498c;
+    
+} 
+
+#paste{
+    position: absolute;
+    transform: translate(1700%,-45px);
+   
+}
+#paste:hover > i{
+    color: #343A40;
+    transform: scale(1.6);
+}
+
+
+#delete{
+    position: absolute;
+    transform: translate(1600%,-45px);
+    
+}
+
+#delete:hover > i{
+   color: #ae0000;
+   transform: scale(1.6);
+
+    
+}
+.borrar{
+    display: none;
+}
 ::placeholder { color: #0A3871; }
 #input-text{
     width: 100%;
@@ -339,6 +385,7 @@ overflow: hidden;
 }
 .ocultar{
     animation: opaciti 0.98s linear;
+
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');

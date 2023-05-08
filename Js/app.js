@@ -5,20 +5,37 @@ const botonCopiar = document.querySelector("#copy")
 const textoSalida = document.querySelector("#text-out");
 const visibleMunheco = document.querySelector("#antes");
 const visibleTexto = document.querySelector("#despues");
+const borrar = document.querySelector("#delete")
+const botonPegar = document.querySelector("#paste")
 const numeros = /^[0-9]*$/i;
 const letras = /[áéíóú]+/g
+const vocales = ['a','e','i','o','u']
+const vocalesEncriptadas  = ['ai','enter','imes','ober','ufat']
 
 eventos()
 
 function eventos(){
-textoEntrada.addEventListener('keyup', validar)
-botonEncriptar.addEventListener('click', verEncriptar)
-botonDesencriptar.addEventListener('click', desencriptar)
-botonCopiar.addEventListener('click', copiar)
+textoEntrada.addEventListener('keyup', validar);
+botonEncriptar.addEventListener('click', verEncriptar);
+botonDesencriptar.addEventListener('click', desencriptar);
+botonCopiar.addEventListener('click', copiar);
+borrar.addEventListener('click', borrarText)
+botonPegar.addEventListener('click', pegar)
+
+
 }
 
-
 function validar(){
+
+
+    if(textoEntrada.value !== "")
+    {
+        borrar.classList.remove('borrar');
+
+      }else{
+        borrar.classList.add('borrar')
+        botonPegar.classList.add('borrar')
+      }
    let cadenaTexto = textoEntrada.value.split('');
    let filtro = cadenaTexto.filter(c => letras.test(c) || numeros.test(c) || (c === c.toUpperCase() && c !== ' '));
    if(filtro.length > 0){
@@ -44,9 +61,29 @@ function verEncriptar(){
 
   }
 function desencriptar(){
-
+    let textDesencript = textoEntrada.value.replaceAll('ai', 'a').replaceAll('enter','e').replaceAll('imes','i').replaceAll('ober','o').replaceAll('ufat','u');
+    escribir(textDesencript);
+    // e.getAttribute("id") == "tipo"
+       if(visibleMunheco.getAttribute("class") !== "ocultar"){
+        visibleMunheco.setAttribute('class','ocultar')
+    
+        setTimeout  (function(){ 
+        visibleMunheco.style.display = "none";
+        visibleTexto.style.display = "block";
+        escribir(textDesencript);
+      
+    
+    }, 1000);
+ 
+       } else{
+        escribir(textDesencript);
+       }
+    
 }
 function copiar(){
+   
+    navigator.clipboard.writeText(textoSalida.textContent)
+    botonPegar.classList.remove('borrar')
 
 }
 
@@ -76,10 +113,10 @@ function alertar(b){
 function escribir(text){
 
     var typed = new Typed(textoSalida, {
-        strings: [text, " "],
-        typeSpeed: 30,
+        strings: [text],
+        typeSpeed: 50,
         backDelay: 5000000,
-        showCursor: true,
+        showCursor: false,
       });
 
 
@@ -88,8 +125,27 @@ function escribir(text){
 }
 
 function encriptar(text){
-//const vocales = ['a','e','i','o','u']
-//const vocalesEncriptadas  = ['ai','enter','imes','ober','ufat']
-    let textEncript = text.replaceAll('a', 'ai').replaceAll('e','enter').replaceAll('i','imes').replaceAll('o','ober').replaceAll('u','ufat')
-    return textEncript;    
+
+    let arrayText = text.split('');
+    arrayText.forEach(a => {
+        if(vocales.includes(a)){
+            arrayText[arrayText.indexOf(a)] = vocalesEncriptadas[vocales.indexOf(a)]
+            
+        }
+    }); 
+    let textEncript = arrayText.join('')
+  return textEncript;    
+  
+}
+
+function borrarText(){
+    textoEntrada.value ="";
+    borrar.classList.add('borrar')
+    
+}
+
+function pegar(){
+    navigator.clipboard.readText().then(text => {
+          textoEntrada.value=text;
+    });
 }
