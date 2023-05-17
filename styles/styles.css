@@ -412,3 +412,224 @@ overflow: hidden;
     from { width: 100% }
     to { width:0 }
 }
+
+@media (max-width: 768px){
+body{
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+}
+#logo{
+    width: 4.05%;
+    height: 3.92vh;
+margin: 6.22vh 0% 0vh 5.21%;
+}
+#logo img{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    }
+
+    #encriptar{
+ 
+       width: 89.58%;
+       max-width: 688px;
+        margin: 10.22vh 0% 0vh 5.21%;
+        
+        }
+        #editor{
+            max-width: 688px;
+            max-height: 596px ;
+        }
+        #text-alert{
+            font-size: 1.02vh;
+        }
+        #botones{
+         margin-bottom: 5.45vh;
+        }
+       #desencriptar{
+        width: 89.58%;
+        max-width: 688px;
+        height: auto;
+        max-height: 343px;
+        margin: 0vh 5.21%;
+
+       }
+        #desencriptar img{display: none;}
+
+        #desencriptar p:nth-child(2){
+            max-width: 624px;
+            max-height: 29px;
+            margin: 2.74vh 4.65% 1.37vh 4.65%;
+        }
+        #desencriptar p:nth-child(3){
+            max-width: 624px;
+            max-height: 29px;
+            margin: 0vh 4.65% 1.37vh 4.65%;
+        }
+
+        #despues{
+            width: 89.58%;
+            height: 49.32vh;
+            max-height: 343px;
+            margin: 2.74vh 4.65% 2.74vh 4.65%;
+
+            
+        }
+
+        #despues > #desencriptar {
+            width: 89.58%;
+            max-width: 688px;
+            height: auto;
+            max-height: 343px;
+            margin: 0vh 5.21%;
+
+            
+        }
+        #text-out{
+           width: 100%;
+           max-width: 688px;
+           height: 49.32vh;
+           max-height: 200px;
+           overflow-y: auto;
+           margin-bottom: 2.74vh;
+        }
+
+        #copy{
+          margin-left: 43%;
+        }
+
+        #paste{
+            position: absolute;
+            transform: translate(4200%,-45px);
+           
+        }
+        
+        
+        #delete{
+            position: absolute;
+            transform: translate(3900%,-45px);
+            
+        }
+        
+}
+
+
+@media (max-width: 376px){
+
+    body{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    
+
+    }
+
+    #logo{
+        width: 8.53%;
+        height: 5.14vh;
+    margin: 2.57vh 0% 0vh 4.27%;
+    }
+    #logo img{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        }
+
+        #encriptar{
+ 
+            width: 91.47%;
+            max-width: 343px;
+            height: 92.63vh;
+            max-height: 491px;
+             margin: 8.57vh 4.27% 0vh 4.27%;
+             
+             }
+             #editor{
+                 max-width: 688px;
+                 max-height: 300px ;
+               
+             }
+             #alert{
+                width: 66.76%;
+                max-width: 229px;
+             }
+             #text-alert{
+              
+                max-width: 205px;
+                 font-size: 1.2vh;
+             }
+             #botones{
+                flex-direction: row;
+                flex-wrap: wrap;
+              margin-bottom: 2.57vh;
+             }
+             #botonOne, #botonTwo{
+                width: 100%;
+                margin-bottom: 2.57vh;
+                height: 7.18vh;
+                max-height: 67px;
+             }
+
+             #desencriptar{
+                width: 95.34%;
+                max-width: 327px;
+                height: auto;
+                max-height: 595px;
+                margin: 12.86vh 7%;
+        
+               }
+                #desencriptar img{display: none;}
+        
+                #desencriptar p:nth-child(2){
+                    font-size: 2.57vh;
+                    max-width: 263px;
+                    max-height: 58px;
+                    margin: 3.43vh 9.8% 1.93vh 9.8%;
+                }
+                #desencriptar p:nth-child(3){
+                    font-size: 1.71vh;
+                    max-width: 2634px;
+                    max-height: 29px;
+                    margin: 0vh 9.8% 3.43vh 9.8%;
+                }
+
+            #despues{
+            width: 95.34%;
+            height: 49.32vh;
+            max-height: 432px;
+            margin: 2.74vh 4.65% 2.74vh 4.65%;
+           
+
+            
+        }
+
+        #text-out{
+           width: 100%;
+           max-width: 688px;
+           height: 38vh;
+           max-height: 450px;
+           overflow-y: auto;
+           margin-bottom: 2.74vh;
+
+          
+        }
+
+        #copy{
+          margin-left: 43%;
+          margin-bottom: 2.74vh;
+        }
+
+        #paste{
+            position: absolute;
+            transform: translate(2500%,-50px);
+           
+        }
+        
+        
+        #delete{
+            position: absolute;
+            transform: translate(2080%,-50px);
+            
+        }
+
+}

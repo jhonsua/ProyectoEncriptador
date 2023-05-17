@@ -141,6 +141,7 @@ function encriptar(text){
 function borrarText(){
     textoEntrada.value ="";
     borrar.classList.add('borrar')
+    botonPegar.classList.add('borrar')
     
 }
 
